@@ -16,9 +16,8 @@ def get_website():
     url = request.form['url']
 
 
-    short_url = "http://Bs.id/" + find_short_url(url)
+    short_url = "http://Bs.id/" + str(find_short_url(url))
 
-    #short_url = 'Http://' + url
     return render_template('shorten.html', return_url=short_url)
 
 if __name__ == "__main__":

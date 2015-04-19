@@ -8,7 +8,7 @@ BASE = 122
 def find_short_url(url):
 	#url = convert_to_base(url)
 	test = saturate(url)
-	
+	print(test[1])
 	return test[0]
 
 def convert_to_base(url):
