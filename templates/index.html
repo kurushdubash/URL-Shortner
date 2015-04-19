@@ -17,11 +17,13 @@
 		</form>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 		<script type="text/javascript">
 			
 			$(document).ready(function(){
-				if( "" != "{{ return_url }}"){
-					$("#url").val("{{ return_url }}");
+				var url = "{{ return_url }}"
+				if( url != ""){
+					$("#url").val(url);
 				}
 			});
 
