@@ -16,7 +16,7 @@ def get_website():
     url = request.form['url']
 
 
-    short_url = find_short_url(url)
+    #short_url = find_short_url(url)
 
 
     return render_template('shorten.html')
