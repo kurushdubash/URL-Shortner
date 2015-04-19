@@ -5,6 +5,16 @@ from helper import*
 
 BASE = 122
 
+def strip_url(url):
+	string = ''
+	counter = url.index('/') + 1
+	while(counter < len(url)):
+		string += url[counter]
+		counter+=1
+	print(string)
+	return string
+
+
 def find_short_url(url):
 	#url = convert_to_base(url)
 
@@ -15,6 +25,8 @@ def find_short_url(url):
 	test = saturate(url)
 	print(test[1])
 	return test[0]
+
+
 
 def convert_to_base(url):
 	base_value = []
@@ -32,4 +44,3 @@ def convert_to_base(url):
 
 def true_ord(char):
 	return 0
-

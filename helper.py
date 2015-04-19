@@ -47,7 +47,7 @@ def saturate(key):
     array_of_base = []
     for idx, char in enumerate(reversed_key):
         int_sum += true_ord(char) * int(math.pow(BASE, idx))
-        array_of_base.append(int_sum)
+        array_of_base.append(true_ord(char))
     return [int_sum, array_of_base]
  
  
