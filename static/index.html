@@ -1,143 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	
-	<title>Millionbears</title>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>B-Side URL Shortener</title>
+		<link rel="stylesheet" href="http://www.lukesheard.com/assets/css/bootstrap.css">
+		<style type="text/css">
 
-	<link rel="shortcut icon" href="http://kurushdubash.com/lot/assets/images/gt_favicon.png">
-	
-	<!-- Bootstrap itself -->
-	<link href="http://kurushdubash.com/lot/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+			html, body {
+			  	overflow: hidden;
+			}
 
-	<!-- Custom styles -->
-	<link rel="stylesheet" href="http://kurushdubash.com/lot/assets/css/magister.css">
+			.logo{
+				width: 15vw;
+				height: 15vw;
+				background-image: url(http://berkeleybside.com/wp-content/uploads/2014/03/logo-white-1024x1024.jpg);
+  				background-size: contain;
+				margin: 0 auto;
+				margin-top: 12vh;
+				margin-bottom: 0;
+			}
 
-	<!-- Fonts -->
-	<link href="http://kurushdubash.com/lot/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
-</head>
-<body class="theme-invert">
+			.title{
+				font-size: 7vw;
+				text-align: center;
+				width: 25vw;
+				margin: 0 auto;
+				margin-top: 2vh;
+			}
 
+			.entry{
+				text-align: center;
+				margin: 0 auto;
+				margin-top: 2vh;
+				max-width:40vw;
+			}
 
-<style>
-title{
-	font-family: 'Wire One', Helvetica, Arial, sans-serif;
-}
-form {
-	margin: 40px 0;
-}
-div {
-	clear: both;
-	margin: 0 50px;
-}
-label {
-  width: 200px;
-  border-radius: 3px;
-  border: 2px solid #300000 
+			.entry input{
+				text-align: center;
+			}
 
-}
-/* hide input */
-input.radio:empty {
-	margin-left: -999px;
-}
-/* style label */
-input.radio:empty ~ label {
-	position: relative;
-	float: left;
-	line-height: 2.5em;
-	text-indent: 3.25em;
-	margin-top: 2em;
-	cursor: pointer;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-input.radio:empty ~ label:before {
-	position: absolute;
-	display: block;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	content: '';
-	width: 2.5em;
-	background: #D1D3D4;
-	border-radius: 3px 0 0 3px;
-}
-/* toggle hover */
-input.radio:hover:not(:checked) ~ label:before {
-	content:'\2714';
-	text-indent: .3em;
-	color: #000;
-	background-color: #66FFCC;
-}
-input.radio:hover:not(:checked) ~ label {
-	color: #000; 
-	/*#888*/
-}
-/* toggle on */
-input.radio:checked ~ label:before {
-	content:'\2714';
-	text-indent: .3em;
-	color: #B80000 ;
-	background-color: #4DCB6D;
-}
-input.radio:checked ~ label {
-	color: #000033;
-}
-/* radio focus */
-input.radio:focus ~ label:before {
-	box-shadow: 0 0 0 3px #999;
-}
-</style>
+			.entry button{
+				font-size: max(1em, 1vw);
+				width: 100%;
+				max-width: 30%;
+				margin: 15px auto;
+			}
 
-<!-- Main (Home) section -->
-<section class="section" id="head">
-	<div class="container">
+			@media (max-width: 700px){
+				.logo{
+					width: 35vw;
+					height: 35vw;
+				}
 
-		<div class="row">
-			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">	
+				.entry{
+					max-width: 60vw;
+				}
 
-				<!-- Site Title, your name, HELLO msg, etc. -->
-				<h1 class="title">Millionbears</h1>
+				.entry button{
+					max-width: 100%;
+				}
+			}
 
-				<div>
-					<div>
-						<form action='/api/lottery' method='POST'>
-							<input type="radio" name="value" id="radio1" value="NY" class="radio" checked/>
-							<label for="radio1" style="margin-right: 270px; margin-left: 270px;">NY Megamillions</label>
-							</div>
+		</style>
+	</head>
 
-							<div>
-							<input type="radio" name="value" id="radio2" value="PB" class="radio"/>
-							<label for="radio2" style="margin-right: 270px; margin-left: 270px;">Powerball</label>
-							</div>
-							<p><input type="submit" class="btn btn-default btn-lg" style="margin-top: 50px; margin-right: 250px; margin-left: 250px;" /></p>
-						</form>
-					<!-- Nice place to describe your site in a sentence or two -->
-					
-					</div> <!-- /col -->
-				</div>
-		</div> <!-- /row -->
-	
-	</div>
-</section>
+	<body>
+		<div class="logo"></div>
+
+		<h1 class="title">B-Side</h1>
+
+		<form class="entry">
+		   	<input type="text" class="form-control" id="url" placeholder="Enter Url">
+		   	<button type="submit" class="btn btn-default">Submit</button>
+		</form>
 		
-				
+	</body>
 
-
-
-
-
-
-
-<!-- Load js libs only when the page is loaded. -->
-<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-<!-- <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> -->
-<script src="http://kurushdubash.com/lot/assets/js/modernizr.custom.72241.js"></script>
-<!-- Custom template scripts -->
-<!-- <script src="http://kurushdubash.com/lot/assets/js/magister.js"></script> -->
-</body>
 </html>
