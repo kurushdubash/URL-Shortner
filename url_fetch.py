@@ -21,11 +21,11 @@ def generate_short_code():
 		code += values[random.randrange(0, 63)]
 	return code
 
-def find_short_url(url):
+def find_short_url(long, url):
 	short_code = generate_short_code()
 	while(check_database(short_code) != None):
 		short_code=generate_short_code()
-	add_shortcode_site(url, short_code)
+	add_shortcode_site(long, short_code)
 	return short_code
 
 
