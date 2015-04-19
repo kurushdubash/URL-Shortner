@@ -44,9 +44,11 @@ def saturate(key):
     """
     int_sum = 0
     reversed_key = key[::-1]
+    array_of_base = []
     for idx, char in enumerate(reversed_key):
         int_sum += true_ord(char) * int(math.pow(BASE, idx))
-    return int_sum
+        array_of_base.append(int_sum)
+    return [int_sum, array_of_base]
  
  
 def dehydrate(integer):
@@ -64,7 +66,7 @@ def dehydrate(integer):
     while integer > 0:
         remainder = integer % BASE
         string = true_chr(remainder) + string
-        integer /= BASE
+        integer =  int(integer / BASE)
     return string
  
 # if __name__ == '__main__':
