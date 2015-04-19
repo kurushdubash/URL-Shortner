@@ -1,0 +1,12 @@
+Django==1.7
+Flask==0.10.1
+gunicorn==19.2.0
+itsdangerous==0.24
+Jinja2==2.7.3
+MarkupSafe==0.23
+python-dateutil==2.2
+requests==2.4.1
+six==1.9.0
+SpeechRecognition==1.1.2
+virtualenv==1.11.6
+Werkzeug==0.9.6

@@ -1,0 +1,145 @@
+html {
+	background:#505D6E url(http://kurushdubash.com/lot/assets/images/body4.jpg) no-repeat center center fixed; 
+	min-height:100%;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+}
+
+body {
+	background:transparent;
+	min-height:100%; 	
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+	line-height: 1.5em;
+	font-size:14px;
+	font-family: Helvetica, Arial, sans-serif;
+	color:#fff;
+	color:rgba(255,255,255,.8); 
+	font-weight: normal;
+}
+
+
+
+
+/********************************************************/
+/*                   UI - Buttons                       */
+/********************************************************/
+.btn{
+	color:#333;
+	text-shadow: none;
+	text-decoration: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border:0 none;
+}
+.btn:hover {
+	color:#000;
+}
+.btn-lg { 
+	padding:16px 30px;
+	font-size:inherit;
+}
+
+.btn-link {
+	color:rgba(255,255,255,.8);
+}
+.btn-link:hover, .btn-link:focus, .btn-link:active {
+	color:#fff
+}
+.btn-default {
+	background: rgba(255,255,255,.5);
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
+	background: rgba(255,255,255,.8);
+}
+.btn-primary {
+	background: rgba(255,255,255,.2);
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:active {
+	background: rgba(255,255,255,.5);
+}
+
+
+/***********************************************************/
+/*                   Inverted theme                        */
+/***********************************************************/
+.theme-invert { 	
+	color:#222;
+	color:rgba(0,0,0,.8); 
+ }
+.theme-invert a { 
+	color:#000;
+}
+.theme-invert .btn {
+	color:rgba(255,255,255,.8);
+}
+.theme-invert .btn:hover {
+	color:#fff;
+}
+.theme-invert .btn-link {
+	color:rgba(0,0,0,.8);
+}
+.theme-invert .btn-link:hover, .theme-invert .btn-link:focus, .theme-invert .btn-link:active {
+	color:#000
+}
+.theme-invert .navbar-toggle {
+	background: rgba(0, 0, 0, 0.12);
+}
+.theme-invert .navbar-toggle .icon-bar {
+  background: #333;
+}
+.theme-invert .mainmenu .dropdown-menu a { 
+	color:#000;
+}
+.theme-invert .mainmenu .dropdown-menu a:hover { 
+	background:rgba(0,0,0,.1);
+	color:#000;
+}
+
+.theme-invert .title,
+.theme-invert .subtitle,
+.theme-invert .tagline { 
+	color:#222222; 
+	font-family: 'Wire One', Helvetica, Arial, sans-serif;
+	font-size: 125px;
+/*	background:#000;*/
+	text-align: center;
+
+
+/*Use shadows to slowly build up the glow. The first shadow should be the colour of the text. Subsequent shadows are the colour you want the glow to be, all with no x or y offset and with increasing amounts of blur (the number of shadows you use depends on how big you want the glow to be).*/
+	text-shadow:0 0 10px #222222, 0 0 20px #FFFFCC, 0 0 30px #FFFF99, 0 0 40px #FFFF66, 0 0 50px #FFFF33, 0 0 60px #FFFF00, 0 0 70px #FFCC00;
+}
+
+.theme-invert .btn-default {
+	background: rgba(0,0,0,.4);
+}
+.theme-invert .btn-default:hover,
+.theme-invert .btn-default:focus,
+.theme-invert .btn-default:active,
+.theme-invert .btn-default.active {
+	background: rgba(0,0,0,.6);
+	color:#fff;
+}
+.theme-invert .btn-primary {
+	background: rgba(0,0,0,.2);
+}
+.theme-invert .btn-primary:hover,
+.theme-invert .btn-primary:focus,
+.theme-invert .btn-primary:active,
+.theme-invert .btn-primary.active {
+	background: rgba(0,0,0,.3);
+	color:#fff;
+}
+
+.theme-invert .thumbnail {
+	background-color: rgba(255,255,255,.8);
+}
+.thumbnail .caption {
+	color: inherit;
+}
+
+
+
