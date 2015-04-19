@@ -6,8 +6,8 @@ from helper import*
 BASE = 122
 
 def find_short_url(url):
-	url = convert_to_base(url)
-
+	#url = convert_to_base(url)
+	return saturate(url)
 
 def convert_to_base(url):
 	base_value = []
@@ -21,4 +21,4 @@ def convert_to_base(url):
 	return base_value[::-1]
 
 def true_ord(char):
-	return 
+	return 0
