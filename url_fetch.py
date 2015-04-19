@@ -22,7 +22,10 @@ def generate_short_code():
 
 def find_short_url(url):
 	short_code = generate_short_code()
-	
+	while(check_database(short_code) != None):
+		short_code=generate_short_code()
+	add_shortcode_site(url, short_code)
 	return short_code
+
 
 
