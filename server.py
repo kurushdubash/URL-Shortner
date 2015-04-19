@@ -18,8 +18,8 @@ def get_website():
 
     #short_url = find_short_url(url)
 
-
-    return render_template('shorten.html')
+    short_url = 'Http://' + url
+    return render_template('shorten.html', return_url=short_url)
 
 if __name__ == "__main__":
     app.debug = True
