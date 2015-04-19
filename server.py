@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return app.send_static_file('index.html')
+    return render_template('index.html', return_url="")
 
 
 @app.route("/shorten", methods=["POST"])
@@ -17,7 +17,7 @@ def get_website():
 
     short_url = "http://Bs.id/" + str(find_short_url(strip_url(url[url.index(".") + len("."):])))
 
-    return render_template('result.html', return_url=short_url)
+    return render_template('index.html', return_url=short_url)
 
 if __name__ == "__main__":
     app.debug = True
