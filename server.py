@@ -10,7 +10,7 @@ def hello():
     return render_template('index.html', return_url="")
 
 
-@app.route("/shorten", methods=["POST"])
+@app.route("/", methods=["POST"])
 def get_website():
     print(request.form['url'])
     url = request.form['url']
