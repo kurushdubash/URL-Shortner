@@ -14,6 +14,11 @@ def strip_url(url):
 	print(string)
 	return string
 
+def map_nums_to_spec(arr):
+	string = ''
+	for item in arr:
+		string += chr(item)
+	return string
 
 def find_short_url(url):
 	#url = convert_to_base(url)
@@ -24,6 +29,7 @@ def find_short_url(url):
 	# berkeleybside.com/about/team
 	test = saturate(url)
 	print(test[1])
+	return_url = map_nums_to_spec(test[1])
 	return test[0]
 
 
