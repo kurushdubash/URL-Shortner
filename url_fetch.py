@@ -7,6 +7,11 @@ BASE = 122
 
 def find_short_url(url):
 	#url = convert_to_base(url)
+
+	# google.com/email
+	# berkeleybside.com/fox-show-1/
+	# lukesheard.com/about/i-love-you-kush
+	# berkeleybside.com/about/team
 	test = saturate(url)
 	
 	return test[0]
