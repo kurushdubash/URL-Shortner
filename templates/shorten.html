@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>B-Side URL Shortener</title>
+		<link rel="stylesheet" href="http://www.lukesheard.com/assets/css/bootstrap.css">
+		<style type="text/css">
+
+			html, body {
+			  	overflow: hidden;
+			}
+
+			.logo{
+				width: 15vw;
+				height: 15vw;
+				background-image: url(http://berkeleybside.com/wp-content/uploads/2014/03/logo-white-1024x1024.jpg);
+  				background-size: contain;
+				margin: 0 auto;
+				margin-top: 12vh;
+				margin-bottom: 0;
+			}
+
+			.title{
+				font-size: 7vw;
+				text-align: center;
+				width: 25vw;
+				margin: 0 auto;
+				margin-top: 2vh;
+			}
+
+			.entry{
+				text-align: center;
+				margin: 0 auto;
+				margin-top: 2vh;
+				max-width:40vw;
+			}
+
+			.entry input{
+				text-align: center;
+			}
+
+			.entry button{
+				font-size: max(1em, 1vw);
+				width: 100%;
+				max-width: 30%;
+				margin: 15px auto;
+			}
+
+			@media (max-width: 700px){
+				.logo{
+					width: 35vw;
+					height: 35vw;
+				}
+
+				.entry{
+					max-width: 60vw;
+				}
+
+				.entry button{
+					max-width: 100%;
+				}
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="logo"></div>
+
+		<h1 class="title">B-Side</h1>
+
+		<h4> {{ return_url }} </h4>
+		
+	</body>
+
+</html>
