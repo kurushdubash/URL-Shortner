@@ -69,10 +69,20 @@
 		<h1 class="title">B-Side</h1>
 
 		<form class="entry" action="/shorten" method="POST">
-		   	<input name="url" class="form-control" placeholder="Enter Url">
+			<h6>Short URL</h6>
+		   	<input id="url" name="url" class="form-control" placeholder="Enter Url" autocomplete="off">
 		</form>
 
-		<h4> {{ return_url }} </h4>
+		<div class="shortened" style="visibility: hidden;">{{ return_url }}</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function(){
+				$("#url").val($(".shortened").text());
+			});
+
+		</script>
 		
 	</body>
 
