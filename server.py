@@ -19,7 +19,7 @@ def get_website():
     url = strip_url(url)
     short_url = "http://Bs.id/" + str(find_short_url(url))
 
-    return render_template('shorten.html', return_url=short_url)
+    return render_template('result.html', return_url=short_url)
 
 if __name__ == "__main__":
     app.debug = True
