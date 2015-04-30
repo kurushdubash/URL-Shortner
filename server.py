@@ -1,7 +1,8 @@
-from flask import Flask, request, render_template
+from flask import *
 from random import randint
 import os
 from url_fetch import *
+import database as db
 app = Flask(__name__)
 
 
@@ -17,9 +18,17 @@ def get_website():
 
 
     stripped_url = strip_url(url[url.index(".") + len("."):])
-    short_url = "http://bs.id/" + str(find_short_url(url, stripped_url))
+    bside = "http://bs.id/"
+    current = request.url_root
+    short_url = current + str(find_short_url(url, stripped_url))
 
     return render_template('index.html', return_url=short_url)
+
+@app.route("/<url>/")
+def forward(url):
+	send = db.check_database(url)
+	return redirect(send)
+
 
 if __name__ == "__main__":
     app.debug = True
