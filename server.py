@@ -3,7 +3,7 @@ from random import randint
 import os
 
 # Custom URL and Database handlers
-import url_fetch as url
+import url_fetch as fetch
 import database as db
 
 app = Flask(__name__)
@@ -18,11 +18,12 @@ def welcome():
 def added_website():
     print(request.form['url'])
     url = request.form['url']
-    stripped_url = strip_url(url[url.index(".") + len("."):])
-    current = request.url_root
-    short_url = current + str(find_short_url(url, stripped_url))
 
-    return render_template('index.html', return_url=short_url)
+    stripped_url = fetch.strip_url(url[url.index(".") + len("."):])
+    short_url = fetch.find_short_url(url, stripped_url)
+    return_url = request.url_root + str(short_url)
+
+    return render_template('index.html', return_url = return_url)
 
 # Returning a shortened URL
 @app.route("/<url>/")
