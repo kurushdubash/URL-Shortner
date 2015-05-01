@@ -13,11 +13,6 @@ app = Flask(__name__)
 def welcome():
     return render_template('index.html', return_url="")
 
-# About page
-@app.route('/about/')
-def about():
-    return render_template('about.html')
-
 # 404?
 @app.route('/static/<url>/')
 def thing():
