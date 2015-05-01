@@ -13,6 +13,16 @@ app = Flask(__name__)
 def welcome():
     return render_template('index.html', return_url="")
 
+# About page
+@app.route('/about/')
+def about():
+    return render_template('about.html')
+
+# 404?
+@app.route('/static/<url>/')
+def thing():
+    return render_template('index.html', return_url="Page Not Found")
+
 # Created a shortened URL
 @app.route("/", methods=["POST"])
 def added_website():
@@ -28,9 +38,18 @@ def added_website():
 # Returning a shortened URL
 @app.route("/<url>/")
 def forward(url):
+<<<<<<< HEAD
 	send = db.check_database(url)
 	return redirect(send)
+=======
+    send = db.check_database(url)
+    if send != None:
+	   return redirect(send, code=301)
+    else:
+        return render_template('index.html', return_url="Page Not Found")
+>>>>>>> origin/master
 
 if __name__ == "__main__":
     app.debug = True
     app.run()
+
