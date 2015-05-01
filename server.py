@@ -28,16 +28,11 @@ def added_website():
 # Returning a shortened URL
 @app.route("/<url>/")
 def forward(url):
-<<<<<<< HEAD
-	send = db.check_database(url)
-	return redirect(send)
-=======
     send = db.check_database(url)
     if send != None:
 	   return redirect(send, code=301)
     else:
         return render_template('index.html', return_url="Page Not Found")
->>>>>>> origin/master
 
 if __name__ == "__main__":
     app.debug = True
