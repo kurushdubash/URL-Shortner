@@ -13,11 +13,6 @@ app = Flask(__name__)
 def welcome():
     return render_template('index.html', return_url="")
 
-# 404?
-@app.route('/static/<url>/')
-def thing():
-    return render_template('index.html', return_url="Page Not Found")
-
 # Created a shortened URL
 @app.route("/", methods=["POST"])
 def added_website():
