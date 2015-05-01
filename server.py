@@ -29,7 +29,7 @@ def added_website():
 @app.route("/<url>/")
 def forward(url):
 	send = db.check_database(url)
-	return redirect(send, code=301)
+	return redirect(send)
 
 if __name__ == "__main__":
     app.debug = True
